@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8"> 
+    <title>Evaluación de Calificaciones</title> 
+    <link rel="stylesheet" href="exam.css"> 
+</head>
+<body>
+    <div id="contenedor"> <!-- Contenedor principal -->
+        <h2>Evaluación de Calificaciones del Alumno</h2> <!-- Título principal de la página -->
+        <div class="presentacion"> <!-- Sección presentación -->
+            <p>
+                Ingresa datos del alumno y calificaciones para evaluarlo.
+            </p>
+        </div>
+        <form action="Exam.php" method="POST"> <!-- Formulario que envía datos a Exam.php por POST -->
+            <label for="nombre">Nombre del alumno:</label> <!-- Etiqueta para el campo nombre -->
+            <input type="text" id="nombre" name="nombre" required><br><br> <!-- Campo de texto para el nombre -->
+
+            <label>Género:</label> <!-- Etiqueta para el género -->
+            <input type="radio" id="masculino" name="genero" value="Masculino" required>
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="femenino" name="genero" value="Femenino">
+            <label for="femenino">Femenino</label><br><br>
+
+            <label for="materia">Materia:</label> <!-- Etiqueta para  materia -->
+            <input type="text" id="materia" name="materia" required><br><br> <!-- Campo de texto para la materia -->
+
+            <label for="cal1">Calificación 1:</label> <!-- Etiqueta  calificación 1 -->
+            <input type="number" id="cal1" name="cal1" min="0" max="10" step="0.01" required><br><br> <!-- Campo numérico para calificación 1 -->
+
+            <label for="cal2">Calificación 2:</label> <!-- Etiqueta  calificación 2 -->
+            <input type="number" id="cal2" name="cal2" min="0" max="10" step="0.01"><br><br> <!-- Campo numérico para calificación 2 -->
+
+            <label for="cal3">Calificación 3:</label> <!-- Etiqueta  calificación 3 -->
+            <input type="number" id="cal3" name="cal3" min="0" max="10" step="0.01"><br><br> <!-- Campo numérico para calificación 3 -->
+
+            <button type="submit">Evaluar</button> <!-- Botón para enviar el formulario -->
+        </form>
+    </div>
+</body>
